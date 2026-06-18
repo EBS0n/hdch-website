@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 type LogoProps = {
   variant?: "color" | "white";
   size?: number;
@@ -26,7 +28,7 @@ export default function Logo({
     <span className="inline-flex items-stretch gap-2">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/images/현대화학 로고.jpg"
+        src={asset("/images/현대화학 로고.jpg")}
         alt="현대화학 로고"
         width={size}
         height={size}

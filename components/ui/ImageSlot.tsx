@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getSlotMeta, isSlotId, type ImageSlotId } from "@/lib/imageManifest";
+import { asset } from "@/lib/asset";
 
 type ImageSlotProps = {
   id: ImageSlotId | string;
@@ -44,7 +45,7 @@ export default function ImageSlot({
   const meta = isSlotId(id) ? getSlotMeta(id) : undefined;
   const [exists, setExists] = useState<boolean | null>(null);
 
-  const src = meta ? `/images/${id}.${meta.ext ?? "jpg"}` : null;
+  const src = meta ? asset(`/images/${id}.${meta.ext ?? "jpg"}`) : null;
 
   useEffect(() => {
     if (!src) return;

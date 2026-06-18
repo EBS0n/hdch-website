@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import ImageSlot from "@/components/ui/ImageSlot";
 import type { ImageSlotId } from "@/lib/imageManifest";
 import PageBanner from "@/components/shared/PageBanner";
+import { asset } from "@/lib/asset";
 
 const cases: ImageSlotId[] = [
   "case-1", "case-2", "case-3",
@@ -31,7 +32,7 @@ export default function CasesPage() {
           <div className="mt-12">
             {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
             <video
-              src="/images/case-featured.mp4"
+              src={asset("/images/case-featured.mp4")}
               className="w-full rounded-md"
               autoPlay
               muted

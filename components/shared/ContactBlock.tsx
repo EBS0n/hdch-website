@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { company } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 const NAVY = "#1A2670";
 const DIVIDER = "#00AEEF";
@@ -36,7 +37,7 @@ export default function ContactBlock() {
             {/* 아이콘 (지도/전화/메일) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`/images/${encodeURIComponent(`문의및상담 아이콘 ${it.icon}.png`)}`}
+              src={asset(`/images/${encodeURIComponent(`문의및상담 아이콘 ${it.icon}.png`)}`)}
               alt=""
               aria-hidden
               className="w-5 h-5 flex-shrink-0 object-contain"

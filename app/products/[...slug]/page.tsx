@@ -11,6 +11,7 @@ import {
   type ProductNode,
 } from "@/lib/site";
 import { productSlotIdFromPath } from "@/lib/imageManifest";
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -75,14 +76,14 @@ export default async function ProductCatchAll({
                 <ImageSlot id={slotId} rounded="md" />
                 <div className="mt-3 text-right text-[12px] text-ink-500 space-x-6">
                   <a
-                    href={`/downloads/${encodeURIComponent(`${node.name} 조견표.pdf`)}`}
+                    href={asset(`/downloads/${encodeURIComponent(`${node.name} 조견표.pdf`)}`)}
                     download={`${node.name} 조견표.pdf`}
                     className="relative inline-block transition-colors duration-200 hover:text-navy-700 hover:font-bold after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-px after:bg-current after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                   >
                     PDF 다운로드
                   </a>
                   <a
-                    href={`/downloads/${encodeURIComponent(`${node.name} 조견표.xlsx`)}`}
+                    href={asset(`/downloads/${encodeURIComponent(`${node.name} 조견표.xlsx`)}`)}
                     download={`${node.name} 조견표.xlsx`}
                     className="relative inline-block transition-colors duration-200 hover:text-navy-700 hover:font-bold after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-px after:bg-current after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                   >

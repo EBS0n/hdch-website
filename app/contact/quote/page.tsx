@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
 import PageBanner from "@/components/shared/PageBanner";
+import { asset } from "@/lib/asset";
 
 export default function QuotePage() {
   return (
@@ -34,7 +35,7 @@ export default function QuotePage() {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`/images/${encodeURIComponent("문의및상담 아이콘 전화.png")}`}
+                    src={asset(`/images/${encodeURIComponent("문의및상담 아이콘 전화.png")}`)}
                     alt=""
                     className="w-6 h-6 object-contain"
                   />
@@ -53,7 +54,7 @@ export default function QuotePage() {
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`/images/${encodeURIComponent("문의및상담 아이콘 메일.png")}`}
+                    src={asset(`/images/${encodeURIComponent("문의및상담 아이콘 메일.png")}`)}
                     alt=""
                     className="w-6 h-6 object-contain"
                   />

@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import ImageSlot from "@/components/ui/ImageSlot";
 import PageBanner from "@/components/shared/PageBanner";
+import { asset } from "@/lib/asset";
 
 const steps = [
   { title: "입고 검사", desc: "원자재 부적합품 입고 전 / 수입 샘플링 검사" },
@@ -37,7 +38,7 @@ export default function QualityProcessPage() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`/images/${encodeURIComponent(`품질관리공정 아이콘 ${i + 1}.png`)}`}
+                  src={asset(`/images/${encodeURIComponent(`품질관리공정 아이콘 ${i + 1}.png`)}`)}
                   alt={s.title}
                   className="mx-auto mb-3 max-w-full h-auto object-contain"
                 />
@@ -62,7 +63,7 @@ export default function QualityProcessPage() {
             {/* 왼쪽 끝: 공장(출발지) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/공장.png"
+              src={asset("/images/공장.png")}
               alt=""
               aria-hidden
               className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-10 h-[84px] w-[84px] object-contain"
@@ -70,7 +71,7 @@ export default function QualityProcessPage() {
             {/* 오른쪽 끝: 고객(도착지) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/수령.png"
+              src={asset("/images/수령.png")}
               alt=""
               aria-hidden
               className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-10 h-[84px] w-[84px] object-contain"
@@ -78,7 +79,7 @@ export default function QualityProcessPage() {
             {/* 좌 → 우로 이동하는 택배차 */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/택배차.png"
+              src={asset("/images/택배차.png")}
               alt=""
               aria-hidden
               className="drive-lr absolute top-1/2 -translate-y-1/2 z-0 h-12 w-auto object-contain"
