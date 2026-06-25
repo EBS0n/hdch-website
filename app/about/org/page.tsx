@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import { orgChart, orgContacts } from "@/lib/site";
 import PageBanner from "@/components/shared/PageBanner";
+import { asset } from "@/lib/asset";
 
 const LINE = "#909090";
 const DOT = "#00AEEF";
@@ -114,7 +115,13 @@ export default function OrgPage() {
                       className="text-lg sm:text-xl font-bold flex items-center gap-2"
                       style={{ color: BRANCH_NAME }}
                     >
-                      <span aria-hidden>📞</span>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={asset(`/images/${encodeURIComponent("문의및상담 아이콘 전화.png")}`)}
+                        alt=""
+                        aria-hidden
+                        className="w-6 h-6 object-contain"
+                      />
                       {orgContacts.mainPhone}
                     </p>
                   </div>

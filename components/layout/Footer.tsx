@@ -9,14 +9,14 @@ type FooterProps = {
 export default function Footer({ variant = "default" }: FooterProps) {
   const isLight = variant === "light";
 
-  const footerBg = isLight ? "bg-white" : "bg-[color:var(--color-footer)]";
+  const footerBg = isLight ? "bg-white" : "bg-[#15205C]";
   const colText = isLight
     ? "text-[15px] text-navy-700 leading-relaxed space-y-1"
-    : "text-sm text-ink-600 leading-relaxed space-y-1";
+    : "text-sm text-[#f0f2f5] leading-relaxed space-y-1";
   const copyText = isLight
     ? "text-center text-sm text-navy-500 mt-8"
-    : "text-center text-xs text-ink-400 mt-8";
-  const telLabel = isLight ? "전화" : "전화번호";
+    : "text-center text-xs text-[#8FB3E8] mt-8";
+  const telLabel = "전화";
 
   return (
     <footer className={`${footerBg} mt-16`}>

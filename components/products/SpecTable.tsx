@@ -1,5 +1,5 @@
 import ImageSlot from "@/components/ui/ImageSlot";
-import { getSlotMeta, isSlotId, type ImageSlotId } from "@/lib/imageManifest";
+import { isSlotId } from "@/lib/imageManifest";
 import type { SpecColumn, SpecTable as SpecTableType } from "@/lib/site";
 
 type Props = { table: SpecTableType };
@@ -95,15 +95,6 @@ export default function SpecTable({ table }: Props) {
                           compact
                           caption={`${table.title} 단독 컷`}
                         />
-                        {(() => {
-                          const m = getSlotMeta(table.productImageSlot as ImageSlotId);
-                          return (
-                            <p className="mt-1 text-[10px] text-ink-400 text-center">
-                              권장 {m.width} × {m.height}px
-                              {m.aspectLabel ? ` (${m.aspectLabel})` : ""}
-                            </p>
-                          );
-                        })()}
                         {table.productImageNote && (
                           <p className="mt-1 text-[10px] text-ink-400 text-center">
                             {table.productImageNote}

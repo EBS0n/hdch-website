@@ -47,7 +47,7 @@ export default function Logo({
             className="block text-center indent-[1px] origin-bottom scale-y-[1.2] text-[10px] sm:text-[11px] font-medium tracking-[2px]"
             style={{ color: textColor }}
           >
-            SINCE 1983
+            SINCE 1987
           </span>
         </span>
       )}

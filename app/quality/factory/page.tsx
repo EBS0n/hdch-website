@@ -8,8 +8,8 @@ const equipments = [
   { id: "factory-equipment-1", label: "사출성형기 · 170TON · 1대" },
   { id: "factory-equipment-2", label: "사출성형기 · 150TON · 2대" },
   { id: "factory-equipment-3", label: "사출성형기 · 100TON · 2대" },
-  { id: "factory-equipment-4", label: "SOFT 수동 · 18K · 1대" },
-  { id: "factory-equipment-5", label: "SOFT 자동조립기 · 20K · 1대" },
+  { id: "factory-equipment-4", label: "SOFT 수동생산설비 · 18kW · 1대" },
+  { id: "factory-equipment-5", label: "SOFT 자동생산설비 · 29kW · 1대" },
   { id: "factory-equipment-6", label: "칠러 · 10RT · 1대" },
 ] as const;
 

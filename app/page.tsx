@@ -1,10 +1,13 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HomeMedia from "@/components/home/HomeMedia";
+import HomeBackground from "@/components/home/HomeBackground";
 
 export default function Home() {
   return (
     <>
+      {/* 홈 전용 — body 배경을 흰색(#ffffff)으로 강제 (전역 #f8fafb 무효화) */}
+      <HomeBackground />
       <Header variant="dark" />
       <main className="relative z-0 pointer-events-none overflow-hidden h-[calc((100vh_-_80px)*2/3)] sm:h-[calc((100vh_-_96px)*2/3)]">
         <HomeMedia />

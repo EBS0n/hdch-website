@@ -39,7 +39,7 @@
 
 html,
 body {
-  background: #ffffff;
+  background: #f8fafb;
   color: var(--color-ink-900);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -82,5 +82,5 @@ body {
   }
 }
 .drive-lr {
-  animation: drive-lr 5s linear infinite;
+  animation: drive-lr 5.5s linear infinite;
 }

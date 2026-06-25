@@ -1,7 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
-import ImageSlot from "@/components/ui/ImageSlot";
 import PageBanner from "@/components/shared/PageBanner";
 
 export default function CEOPage() {
@@ -21,9 +20,9 @@ export default function CEOPage() {
             현대화학
           </p>
 
-          <div className="mt-20 sm:mt-24 grid grid-cols-1 md:grid-cols-[1fr_360px] gap-12 md:gap-16 items-start">
+          <div className="mt-32 sm:mt-40">
             <article className="text-ink-700 leading-loose space-y-5 text-[14px] sm:text-[15px]">
-              <h2 className="text-[15px] sm:text-base font-bold text-navy-700 mb-2">
+              <h2 className="text-[20px] sm:text-[21px] font-bold text-navy-700 mb-2">
                 CEO 한마디
               </h2>
               <p>
@@ -66,10 +65,6 @@ export default function CEOPage() {
                 배상
               </p>
             </article>
-
-            <aside>
-              <ImageSlot id="ceo-portrait" rounded="md" />
-            </aside>
           </div>
         </Container>
       </main>

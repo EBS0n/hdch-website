@@ -30,7 +30,7 @@ export default function Header({ variant = "light" }: HeaderProps) {
   return (
     <>
       <header
-        className={`relative z-50 transition-all duration-200 ${bg}`}
+        className={`sticky top-0 z-50 transition-all duration-200 ${bg}`}
         onMouseLeave={() => setHovered(null)}
       >
         <div className="mx-auto max-w-[1440px] w-full px-5 sm:px-8 lg:px-12 h-[80px] sm:h-[96px] flex items-center">
