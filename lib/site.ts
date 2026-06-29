@@ -6,7 +6,7 @@ export const company = {
   fax: "051-305-6622",
   email: "hdch87@hdch87.com",
   ceo: "손지훈",
-  businessNo: "000-00-00000",
+  businessNo: "874-04-00641",
   copyright: "Copyright © 2026 현대화학 Co., Ltd. All rights reserved.",
 } as const;
 
@@ -206,7 +206,7 @@ export const productTree: ProductNode[] = [
             productImageSlot: "spec-pe-hex",
             productImageNote: "H① / H② / L",
             rows: [
-              { no: 1, size: "Gu-12", values: ["41.0", "36.0", "26.5", "400"] },
+              { no: 1, size: "GU-12", values: ["41.0", "36.0", "26.5", "400"] },
               { no: 2, size: "GU-16", values: ["46.0", "41.5", "29.0", "300"] },
               { no: 3, size: "H-50", values: ["56.0", "49.5", "19.0", "200"] },
             ],
@@ -234,7 +234,7 @@ export const productTree: ProductNode[] = [
             productImageSlot: "spec-screw-gu",
             productImageNote: "O·D① / O·D② / L",
             rows: [
-              { no: 1, size: "Gu-4", values: ["Ø17.2", "Ø12.1", "11.5", "3,000"] },
+              { no: 1, size: "GU-4", values: ["Ø17.2", "Ø12.1", "11.5", "3,000"] },
               { no: 2, size: "GU-6", values: ["Ø20.2", "Ø15.5", "12.2", "2,000"] },
               { no: 3, size: "GU-8", values: ["Ø24.4", "Ø20.0", "9.5", "1,500"] },
               { no: 4, size: "GU-12", values: ["Ø34.0", "Ø25.2", "9.5", "2,000"] },

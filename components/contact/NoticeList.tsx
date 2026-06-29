@@ -63,14 +63,22 @@ export default function NoticeList() {
                   </span>
                 </button>
 
-                {/* 펼쳐지는 내용 */}
-                {isOpen && (
-                  <div className="bg-soft px-6 py-6 border-t border-line">
-                    <article className="max-w-none text-ink-700 leading-loose whitespace-pre-line text-[14px] sm:text-[15px]">
-                      {n.body || "(내용 없음)"}
-                    </article>
+                {/* 펼쳐지는 내용 — 높이/투명도 부드럽게 (FAQ와 동일 방식) */}
+                <div
+                  className={`grid transition-all duration-300 ease-out ${
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="bg-soft px-6 py-6 border-t border-line">
+                      <article className="max-w-none text-ink-700 leading-loose whitespace-pre-line text-[14px] sm:text-[15px]">
+                        {n.body || "(내용 없음)"}
+                      </article>
+                    </div>
                   </div>
-                )}
+                </div>
               </td>
             </tr>
           );

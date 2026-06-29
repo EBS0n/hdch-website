@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FloatingNav from "@/components/shared/FloatingNav";
 
 export const metadata: Metadata = {
   title: "현대화학 | HC Chemical",
@@ -24,6 +25,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-[#f8fafb] text-[color:var(--color-ink-900)]">
         {children}
+        <FloatingNav />
       </body>
     </html>
   );

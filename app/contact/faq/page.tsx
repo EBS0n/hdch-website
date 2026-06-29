@@ -34,8 +34,8 @@ export default function FAQPage() {
                   <button
                     type="button"
                     onClick={() => toggle(f.id)}
-                    className={`w-full block text-left bg-navy-50 hover:bg-navy-100 transition-all duration-200 px-6 sm:px-8 py-4 sm:py-5 ${
-                      isOpen ? "rounded-3xl" : "rounded-full"
+                    className={`w-full block text-left bg-navy-50 hover:bg-navy-100 transition-all duration-300 ease-out px-6 sm:px-8 py-4 sm:py-5 ${
+                      isOpen ? "rounded-[20px]" : "rounded-[28px]"
                     }`}
                     aria-expanded={isOpen}
                   >

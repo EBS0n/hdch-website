@@ -87,14 +87,26 @@ export default function SpecTable({ table }: Props) {
                     />
                   ))}
                   {idx === 0 && hasImage ? (
-                    <td rowSpan={rowCount} className={`${lastCol} p-3 align-middle`}>
-                      <div className="relative mx-auto w-full max-w-[160px]">
-                        <ImageSlot
-                          id={table.productImageSlot as never}
-                          rounded="md"
-                          compact
-                          caption={`${table.title} 단독 컷`}
-                        />
+                    // 사진 칸은 모든 행을 rowSpan. 사진이 행 높이를 강제로 늘리지 않도록
+                    // 셀 높이에 맞춰 contain으로 들어가게 함 → 행 적은 표에서 마지막 칸
+                    // 늘어짐(WebKit rowSpan 잔여높이 배분) 방지.
+                    <td
+                      rowSpan={rowCount}
+                      className={`${lastCol} p-2 align-middle`}
+                      style={{ height: 1 }}
+                    >
+                      <div className="flex h-full w-full flex-col items-center justify-center">
+                        <div className="flex min-h-0 w-full max-w-[160px] flex-1 items-center justify-center">
+                          <ImageSlot
+                            id={table.productImageSlot as never}
+                            rounded="md"
+                            compact
+                            fixedAspect={false}
+                            fit="contain"
+                            className="max-h-[150px]"
+                            caption={`${table.title} 단독 컷`}
+                          />
+                        </div>
                         {table.productImageNote && (
                           <p className="mt-1 text-[10px] text-ink-400 text-center">
                             {table.productImageNote}

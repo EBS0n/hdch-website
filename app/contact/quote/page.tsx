@@ -1,7 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
-import Logo from "@/components/ui/Logo";
 import PageBanner from "@/components/shared/PageBanner";
 import { asset } from "@/lib/asset";
 
@@ -17,7 +16,14 @@ export default function QuotePage() {
           </h1>
 
           <div className="flex flex-col items-center text-center">
-            <Logo variant="color" size={140} withText={false} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset(`/images/${encodeURIComponent("현대화학 로고 견본.png")}`)}
+              alt="현대화학 로고"
+              width={200}
+              height={200}
+              className="w-[200px] h-auto object-contain"
+            />
             <p className="mt-8 text-[15px] sm:text-base text-ink-700">
               편하게 문의주시면 빠른시간 내에 연락드리겠습니다.
             </p>
@@ -27,45 +33,44 @@ export default function QuotePage() {
               빠른 문의
             </h2>
 
-            <div className="space-y-6 w-full max-w-sm">
-              <div className="flex items-center justify-center gap-5">
-                <span
-                  className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-navy-50"
-                  aria-hidden
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={asset(`/images/${encodeURIComponent("문의및상담 아이콘 전화.png")}`)}
-                    alt=""
-                    className="w-6 h-6 object-contain"
-                  />
-                </span>
-                <a
-                  href="tel:01000000000"
-                  className="text-lg sm:text-xl text-ink-900 hover:text-navy-700 tabular-nums"
-                >
-                  010-0000-0000
-                </a>
-              </div>
-              <div className="flex items-center justify-center gap-5">
-                <span
-                  className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-navy-50"
-                  aria-hidden
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={asset(`/images/${encodeURIComponent("문의및상담 아이콘 메일.png")}`)}
-                    alt=""
-                    className="w-6 h-6 object-contain"
-                  />
-                </span>
-                <a
-                  href="mailto:hdch87@hdch87.com"
-                  className="text-lg sm:text-xl text-ink-900 hover:text-navy-700"
-                >
-                  hdch87@hdch87.com
-                </a>
-              </div>
+            <div className="grid grid-cols-[auto_auto] items-center gap-x-5 gap-y-6 w-fit mx-auto -translate-x-3">
+              {/* 전화 */}
+              <span
+                className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-navy-50"
+                aria-hidden
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={asset(`/images/${encodeURIComponent("문의및상담 아이콘 전화.png")}`)}
+                  alt=""
+                  className="w-6 h-6 object-contain"
+                />
+              </span>
+              <a
+                href="tel:0513050800"
+                className="text-center text-lg sm:text-xl text-ink-900 hover:text-navy-700 tabular-nums"
+              >
+                051-305-0800
+              </a>
+
+              {/* 메일 */}
+              <span
+                className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-navy-50"
+                aria-hidden
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={asset(`/images/${encodeURIComponent("문의및상담 아이콘 메일.png")}`)}
+                  alt=""
+                  className="w-6 h-6 object-contain"
+                />
+              </span>
+              <a
+                href="mailto:hdch87@hdch87.com"
+                className="text-center text-lg sm:text-xl text-ink-900 hover:text-navy-700"
+              >
+                hdch87@hdch87.com
+              </a>
             </div>
           </div>
         </Container>

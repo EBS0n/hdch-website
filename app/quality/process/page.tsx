@@ -34,16 +34,19 @@ export default function QualityProcessPage() {
             {steps.map((s, i) => (
               <div
                 key={s.title}
-                className="bg-[#f8fafb] rounded-lg p-5 text-center"
+                className="bg-[#f8fafb] rounded-lg p-5 text-center flex flex-col"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={asset(`/images/${encodeURIComponent(`품질관리공정 아이콘 ${i + 1}.png`)}`)}
-                  alt={s.title}
-                  className={`mx-auto mb-3 max-w-full h-auto object-contain ${
-                    i === 0 || i === 3 ? "translate-x-[6px]" : ""
-                  }`}
-                />
+                {/* 아이콘 영역 — 카드마다 같은 높이(아이콘 크기 달라도 동일 footprint) */}
+                <div className="h-60 flex items-center justify-center mb-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={asset(`/images/${encodeURIComponent(`품질관리공정 아이콘 ${i + 1}.png`)}`)}
+                    alt={s.title}
+                    className={`max-h-full max-w-full object-contain ${
+                      i === 0 || i === 3 ? "translate-x-[6px]" : ""
+                    }`}
+                  />
+                </div>
                 <p className="text-[11px] text-navy-500 mb-1 tracking-widest">
                   STEP {i + 1}
                 </p>
